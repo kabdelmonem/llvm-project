@@ -79,6 +79,16 @@ protected:
       const char *Overview = nullptr);
 
 public:
+
+  /// This constructor exits program in case of error.
+  CommonOptionsParser(int &argc, const char **argv,
+                      llvm::cl::OptionCategory &Category,
+                      const char *Overview = nullptr)
+      : CommonOptionsParser(argc, argv, Category, llvm::cl::OneOrMore,
+                            Overview) {}
+
+
+
   /// A factory method that is similar to the above constructor, except
   /// this returns an error instead exiting the program on error.
   static llvm::Expected<CommonOptionsParser>
