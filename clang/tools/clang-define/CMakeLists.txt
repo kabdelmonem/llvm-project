@@ -3,11 +3,11 @@ set(LLVM_LINK_COMPONENTS
   Support
   )
 
-add_clang_tool(clang-playground
+add_clang_tool(clang-define
   FindDecl.cpp
   )
 
-clang_target_link_libraries(clang-playground
+clang_target_link_libraries(clang-define
 PRIVATE
   clangAST
   clangBasic
