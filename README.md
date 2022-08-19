@@ -1,5 +1,16 @@
 # The LLVM Compiler Infrastructure
 
+## this is a fork form the llvm project forked from the current llvm version which is v16
+
+## modifications
+ the modifications added to this fork compared to the llvm v16 are as follows:
+ 1. in llvm-project/clang/include/clang/Tooling/CommonOptionsParser.h overide CommonOptionsParser as a public function of the class
+ 2. adding in the clang/tools directory three new tools which are:
+    1. clang-define: prints a list of defined identifiers the locations where they are defined and wether they are referenced or not , also if the identifier is a function parameter or a local variable it appears twice in the list with the second appearance having "parm_or_local_var" at the begining of the line
+    2. clang-reference: prints a list of referenced identifiers ,  the location where the identifier is defined , and the location where the identifier is referenced.
+    3. clang-macros: prints a list of macrodefines and the identifier tokens that follow
+    4. 
+# the original README of llvm
 This directory and its sub-directories contain the source code for LLVM,
 a toolkit for the construction of highly optimized compilers,
 optimizers, and run-time environments.
